@@ -72,3 +72,77 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
 .game-plus{width:52px;height:52px;border-radius:50%;background:var(--cream-light);color:var(--blue);border:3px solid #d9b66d;display:grid;place-items:center;font-size:32px;font-weight:1000;align-self:center;justify-self:center;z-index:2}
 @media(max-width:900px){.games-grid{grid-template-columns:1fr}.game-plus{margin:-4px auto}.game-photos img{height:250px}}
 @media(max-width:560px){.game-photos,.game-details{grid-template-columns:1fr}.game-photos img{height:auto}.premium-label{font-size:11px}.game-card h3{font-size:24px}}
+
+
+/* ===== RÉSEAUX SOCIAUX ===== */
+
+.social-section {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.social-section .section-title {
+  max-width: 750px;
+  margin: 0 auto 35px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 320px));
+  justify-content: center;
+  gap: 25px;
+  margin: 35px auto 25px;
+}
+
+.social-card {
+  display: block;
+  padding: 32px 25px;
+  border-radius: 22px;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.13);
+}
+
+.social-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.social-card h3 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.social-card p {
+  margin: 8px 0 18px;
+  opacity: 0.75;
+}
+
+.social-card span {
+  font-weight: 700;
+}
+
+.youtube-note {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+/* Version téléphone */
+
+@media (max-width: 700px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .social-section {
+    padding: 50px 18px;
+  }
+}
