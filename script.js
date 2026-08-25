@@ -8,3 +8,24 @@ document.querySelectorAll('.faq-list button').forEach(btn=>{
     if(!open){panel.classList.add('open');btn.querySelector('b').textContent='−';}
   });
 });
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('.site-header nav');
+
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+
+    const isOpen = mobileNav.classList.contains('open');
+
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
+}
