@@ -195,3 +195,9 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
     border-bottom: none;
   }
 }
+@media (max-width: 1050px) {
+  .site-header nav.open {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
