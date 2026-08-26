@@ -351,3 +351,92 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
     padding: 26px 22px;
   }
 }
+/* ===== MINI TOUNSI : POUR QUI ? ===== */
+
+.audience-section {
+  background: var(--cream);
+  text-align: center;
+}
+
+.audience-intro {
+  max-width: 820px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+}
+
+.audience-question {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--blue-dark);
+}
+
+.audience-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.audience-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 20px;
+  box-shadow: 0 10px 25px rgba(0, 45, 90, .08);
+}
+
+.audience-icon {
+  display: block;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.audience-card h3 {
+  font-family: Georgia, serif;
+  color: var(--blue-dark);
+  font-size: 19px;
+  margin: 8px 0 12px;
+}
+
+.audience-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.audience-bottom {
+  max-width: 750px;
+  margin: 35px auto 0;
+  padding: 20px;
+  background: var(--blue);
+  color: white;
+  border-radius: 15px;
+}
+
+.audience-bottom strong {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.audience-bottom span {
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-question {
+    font-size: 18px;
+  }
+}
