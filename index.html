@@ -543,16 +543,97 @@ onclick="document.querySelector('.site-header nav').classList.toggle('open')">
       </div>
     </section>
 
-    <section id="lancement" class="launch-section">
-      <div class="launch-ornament">☾ ✦</div>
-      <div class="launch-inner">
-        <span class="eyebrow gold">L'aventure continue</span>
-        <h2>Soyez parmi les premiers informés du lancement.</h2>
-        <p>La box est actuellement en cours de fabrication. Pour recevoir les nouvelles du projet, écrivez-moi ou suivez Mini Tounsi sur TikTok et Instagram.</p>
-        <a class="launch-btn" href="mailto:oueghlanis@gmail.com?subject=Mini%20Tounsi%20-%20Prévenez-moi%20du%20lancement">💌 Me prévenir du lancement</a>
-        <small>TikTok & Instagram · Sarah Oueghlani</small>
+   <section id="lancement" class="launch-section">
+
+  <div class="launch-ornament">◯ ✦ ◯</div>
+
+  <div class="launch-inner">
+
+    <span class="eyebrow gold">L'aventure continue</span>
+
+    <h2>Soyez parmi les premiers informés 🇹🇳</h2>
+
+    <p class="launch-intro">
+      La première production de Mini Tounsi est en préparation.
+      Laissez vos coordonnées pour être prévenu(e) dès l'ouverture des ventes.
+    </p>
+
+    <form class="launch-form" id="launch-form">
+
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          placeholder="Votre prénom"
+        >
       </div>
-    </section>
+
+      <div class="form-group">
+        <label for="email">Adresse e-mail *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="exemple@email.fr"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="telephone">Téléphone <span>(facultatif)</span></label>
+        <input
+          type="tel"
+          id="telephone"
+          name="telephone"
+          placeholder="06 00 00 00 00"
+        >
+      </div>
+
+      <div class="consent-box">
+
+        <label class="checkbox-line">
+          <input
+            type="checkbox"
+            id="consent-email"
+            name="consent_email"
+            required
+          >
+          <span>
+            Je souhaite être informé(e) par e-mail de la disponibilité
+            et des actualités de Mini Tounsi.
+          </span>
+        </label>
+
+        <label class="checkbox-line">
+          <input
+            type="checkbox"
+            id="consent-sms"
+            name="consent_sms"
+          >
+          <span>
+            Je souhaite également être informé(e) par SMS.
+          </span>
+        </label>
+
+      </div>
+
+      <button type="submit" class="launch-btn">
+        🔔 Je veux être prévenu(e)
+      </button>
+
+      <p class="form-privacy">
+        🔒 Vos coordonnées seront uniquement utilisées pour vous informer
+        concernant Mini Tounsi. Vous pourrez retirer votre consentement
+        à tout moment.
+      </p>
+
+    </form>
+
+  </div>
+
+</section>
   </main>
 
   <footer>
