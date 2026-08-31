@@ -440,3 +440,117 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
     font-size: 18px;
   }
 }
+/* ===== FORMULAIRE LANCEMENT MINI TOUNSI ===== */
+
+.launch-form {
+  max-width: 620px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.launch-intro {
+  max-width: 700px;
+  margin: 15px auto 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+  color: white;
+}
+
+.form-group label span {
+  font-weight: 400;
+  opacity: .8;
+  font-size: 13px;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.3);
+  background: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(216,155,50,.18);
+}
+
+.consent-box {
+  margin: 22px 0;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
+}
+
+.checkbox-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.checkbox-line:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox-line input {
+  margin-top: 4px;
+  accent-color: var(--gold);
+}
+
+.launch-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 15px 22px;
+  background: var(--gold);
+  color: var(--blue-dark);
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.launch-btn:hover {
+  transform: translateY(-2px);
+  opacity: .95;
+}
+
+.form-privacy {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255,255,255,.78);
+}
+
+@media (max-width: 600px) {
+  .launch-form {
+    margin-top: 24px;
+  }
+
+  .consent-box {
+    padding: 15px;
+  }
+
+  .launch-btn {
+    font-size: 15px;
+  }
+}
