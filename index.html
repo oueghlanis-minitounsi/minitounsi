@@ -558,7 +558,22 @@ onclick="document.querySelector('.site-header nav').classList.toggle('open')">
       Laissez vos coordonnées pour être prévenu(e) dès l'ouverture des ventes.
     </p>
 
-    <form class="launch-form" id="launch-form">
+   <form
+  class="launch-form"
+  id="launch-form"
+  action="https://formspree.io/f/myeykpja"
+  method="POST"
+     >
+     <input
+  type="hidden"
+  name="_subject"
+  value="Nouvelle inscription — Mini Tounsi"
+>
+
+<input
+  type="hidden"
+  name="source"
+  value="Formulaire lancement MiniTounsi.com"
 
       <div class="form-group">
         <label for="prenom">Prénom</label>
