@@ -29,3 +29,36 @@ if (menuToggle && mobileNav) {
     });
   });
 }
+const launchForm = document.getElementById("launch-form");
+const successMessage = document.getElementById("form-success");
+const errorMessage = document.getElementById("form-error");
+
+if (launchForm) {
+  launchForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    successMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
+    const formData = new FormData(launchForm);
+
+    try {
+      const response = await fetch(launchForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        launchForm.reset();
+        successMessage.style.display = "block";
+      } else {
+        errorMessage.style.display = "block";
+      }
+    } catch (error) {
+      errorMessage.style.display = "block";
+    }
+  });
+}
