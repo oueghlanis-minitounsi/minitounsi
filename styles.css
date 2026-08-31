@@ -591,3 +591,22 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
 .launch-inner::after {
   pointer-events: none;
 }
+.form-success {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.12);
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.form-error {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.12);
+  color: white;
+  text-align: center;
+}
