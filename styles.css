@@ -554,3 +554,40 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
     font-size: 15px;
   }
 }
+/* ===== CORRECTION CHAMPS FORMULAIRE ===== */
+
+.launch-inner {
+  position: relative;
+  z-index: 5;
+}
+
+.launch-form {
+  position: relative;
+  z-index: 10;
+}
+
+.form-group,
+.consent-box,
+.checkbox-line,
+.launch-btn {
+  position: relative;
+  z-index: 11;
+}
+
+.form-group input,
+.checkbox-line input {
+  position: relative;
+  z-index: 12;
+  pointer-events: auto !important;
+}
+
+.launch-ornament {
+  pointer-events: none;
+}
+
+.launch-section::before,
+.launch-section::after,
+.launch-inner::before,
+.launch-inner::after {
+  pointer-events: none;
+}
