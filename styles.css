@@ -630,3 +630,92 @@ footer{background:#001936;color:white;text-align:center;padding:36px 20px}.foote
 .learning-pillars a {
   font-weight: 700;
 }
+/* =========================================
+   MINI TOUNSI - 3 JEUX
+   ========================================= */
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.game-card {
+  height: 100%;
+}
+
+.game-card .game-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.game-card .game-photos img {
+  max-width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+
+/* =========================================
+   APPRENDRE AVEC 3 SENS
+   ========================================= */
+
+.senses-section {
+  text-align: center;
+}
+
+.senses-section .concept-grid {
+  margin-top: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.senses-section article {
+  padding: 30px 24px;
+}
+
+.senses-section article h3 {
+  margin-top: 15px;
+}
+
+
+/* =========================================
+   TABLETTE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .senses-section .concept-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .games-grid {
+    gap: 18px;
+  }
+
+  .game-card .game-photos img {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .senses-section article {
+    padding: 24px 18px;
+  }
+
+}
