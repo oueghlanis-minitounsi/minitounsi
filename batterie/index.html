@@ -7,8 +7,11 @@
   <title>Informations réglementaires et batterie | Mini Tounsi</title>
 
   <style>
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
     }
 
     body {
@@ -33,16 +36,12 @@
       letter-spacing: 2px;
     }
 
-    .conteneur {
+    .conteneur, main {
       max-width: 850px;
       margin: auto;
     }
 
-    main {
-      max-width: 850px;
-      margin: auto;
-      padding: 20px;
-    }
+    main { padding: 20px; }
 
     h1 {
       font-size: clamp(28px, 6vw, 44px);
@@ -55,9 +54,7 @@
       line-height: 1.3;
     }
 
-    h3 {
-      font-size: 19px;
-    }
+    h3 { font-size: 19px; }
 
     section {
       margin: 20px 0;
@@ -66,26 +63,16 @@
       border-radius: 14px;
     }
 
-    dl {
-      margin: 0;
-    }
+    dl { margin: 0; }
 
     dt {
       margin-top: 16px;
       font-weight: bold;
     }
 
-    dd {
-      margin: 4px 0 0;
-    }
-
-    li {
-      margin-bottom: 12px;
-    }
-
-    a {
-      color: #155777;
-    }
+    dd { margin: 4px 0 0; }
+    li { margin-bottom: 12px; }
+    a { color: #155777; }
 
     details {
       margin-top: 20px;
@@ -125,20 +112,14 @@
       font-size: 14px;
     }
 
-    a:focus-visible,
-    summary:focus-visible {
+    a:focus-visible, summary:focus-visible {
       outline: 3px solid #bf9b60;
       outline-offset: 4px;
     }
 
     @media (max-width: 500px) {
-      main {
-        padding: 14px;
-      }
-
-      section {
-        padding: 20px;
-      }
+      main { padding: 14px; }
+      section { padding: 20px; }
     }
   </style>
 </head>
@@ -153,7 +134,7 @@
   </header>
 
   <main>
-    <section>
+    <section id="produit">
       <h2>Votre lecteur</h2>
 
       <dl>
@@ -169,7 +150,7 @@
         <dt>Fabricant du lecteur</dt>
         <dd>Shenzhen Xinditai Electronic Co., Ltd.</dd>
 
-        <dt>Adresse du fabricant</dt>
+        <dt>Adresse figurant dans l’en-tête du dossier fabricant</dt>
         <dd>
           301, Building C, Tongju Industrial Park,
           No. 9 Huilong Road, Shengping Community,
@@ -179,7 +160,7 @@
 
         <dt>Contact technique du fabricant</dt>
         <dd>
-          happy@xinditai.com<br>
+          <a href="mailto:happy@xinditai.com">happy@xinditai.com</a><br>
           +86 13824343309
         </dd>
 
@@ -193,7 +174,7 @@
       </dl>
     </section>
 
-    <section>
+    <section id="batterie">
       <h2>La batterie intégrée</h2>
 
       <dl>
@@ -243,15 +224,17 @@
       </dl>
     </section>
 
-    <section>
+    <section id="recharge">
       <h2>Recharge et précautions</h2>
 
       <p>
-        Le lecteur se recharge par USB avec une
-        <strong>tension d’entrée de 5 V</strong>.
+        Le lecteur se recharge par <strong>USB-C</strong>,
+        avec une <strong>entrée de 5 V continu / 0,5 A</strong>,
+        selon le dossier signé du fabricant.
+        La tension nominale de la batterie, de 3,7 V, est
+        distincte de la tension d’alimentation USB.
         Utilisez un câble et une alimentation compatibles
-        avec les caractéristiques indiquées dans la notice
-        du lecteur.
+        avec les caractéristiques indiquées dans la notice.
       </p>
 
       <ul>
@@ -259,24 +242,20 @@
           Confiez la recharge à un adulte et gardez le câble
           hors de portée des jeunes enfants.
         </li>
-
         <li>
           Gardez le lecteur à l’écart de l’eau, des flammes
           et des fortes chaleurs.
         </li>
-
         <li>
           Ne percez pas, n’écrasez pas et ne court-circuitez
           pas la batterie.
         </li>
-
         <li>
           Si le boîtier ou le câble est endommagé, ou en cas
           de gonflement ou de chauffe anormale, cessez
-          l’utilisation et la recharge et contactez
-          le service après-vente.
+          l’utilisation et la recharge. Contactez votre vendeur
+          ou le <a href="#contact-technique">contact technique du fabricant</a>.
         </li>
-
         <li>
           Débranchez le câble avant toute ouverture,
           intervention ou nettoyage.
@@ -284,16 +263,16 @@
       </ul>
     </section>
 
-    <section>
+    <section id="remplacement">
       <h2>Faire remplacer la batterie</h2>
 
       <p>
         La batterie est intégrée au lecteur.
-        Le dossier du fabricant prévoit son retrait et
+        Le dossier du fabricant décrit son retrait et
         son remplacement par un professionnel indépendant.
-        Contactez le service après-vente pour obtenir
-        la référence de la pièce compatible et les
-        informations de réparation.
+        Pour obtenir la référence de l’ensemble batterie
+        compatible et les informations techniques de réparation,
+        utilisez le contact ci-dessous.
       </p>
 
       <p>
@@ -305,40 +284,138 @@
         et non discriminatoire.
       </p>
 
-      <details>
-        <summary>
-          Informations techniques destinées aux professionnels
-        </summary>
+      <p id="contact-technique">
+        <strong>Pièces détachées et assistance technique du fabricant :</strong><br>
+        <a href="mailto:happy@xinditai.com?subject=MINI%20TOUNSI%20FC-002%20-%20Batterie%20et%20reparation">
+          happy@xinditai.com
+        </a><br>
+        Indiquez le modèle <strong>FC-002</strong> et le numéro
+        de lot du lecteur, s’il figure sur votre produit.
+        Le fabricant communique la référence de remplacement
+        compatible et son prix par ce canal.
+      </p>
+
+      <details id="procedure-remplacement">
+        <summary>Procédure technique destinée aux professionnels</summary>
 
         <p>
-          Selon le dossier XDT-REG-2026-001 du
-          11 novembre 2026, l’accès exige un tournevis
-          cruciforme PH1.
+          Procédure issue du dossier
+          <strong>XDT-REG-2026-001, révision 01 du
+          12 novembre 2026, signé par le fabricant</strong>.
+          Elle concerne la configuration FC-002 décrite
+          dans ce dossier.
         </p>
 
         <p>
-          L’intervention consiste à débrancher le câble,
-          éteindre le lecteur, retirer quatre vis,
-          séparer les demi-coques, déconnecter la fiche
-          à deux broches en tenant son corps et retirer
-          l’ensemble batterie.
+          Réaliser l’intervention sur un établi sec,
+          à l’écart des enfants, avec des précautions
+          adaptées aux composants électroniques.
         </p>
 
         <p>
-          Au remontage, préserver le passage des fils,
-          éviter leur pincement et remettre les quatre vis.
-          Contrôler la fermeture, la lecture des cartes,
-          le son et l’indication de charge.
+          <strong>Outils :</strong> tournevis cruciforme PH1 ;
+          outil d’ouverture en plastique si nécessaire.
+          Aucun outil propriétaire, chauffage, solvant,
+          découpe ou dessoudage n’est prévu.
+          Pour le remontage, utiliser un outil permettant
+          de respecter le couple de serrage indiqué
+          par le fabricant.
+        </p>
+
+        <h3>Retrait de la batterie</h3>
+
+        <ol>
+          <li>
+            Éteindre le lecteur et débrancher le câble USB-C.
+            Ne jamais ouvrir le lecteur pendant la recharge.
+          </li>
+          <li>
+            Retirer les quatre vis du boîtier avec le
+            tournevis PH1. Conserver les vis dans un récipient,
+            hors de portée des enfants. Vérifier l’absence
+            de détérioration des vis et de leurs logements.
+          </li>
+          <li>
+            Séparer délicatement les demi-coques au niveau
+            de leur joint, sans tirer sur les fils du
+            haut-parleur. Ne pas forcer, découper ou
+            chauffer le boîtier.
+          </li>
+          <li>
+            Saisir le corps de la fiche blanche à deux
+            broches et la déconnecter de la carte électronique
+            en tirant dans son axe. Ne pas tirer sur les fils.
+          </li>
+          <li>
+            Soulever l’ensemble batterie hors de son
+            logement moulé. Ne pas comprimer, percer ou
+            déformer la cellule. Protéger la fiche contre
+            tout contact avec un objet métallique.
+          </li>
+        </ol>
+
+        <h3>Remplacement et remontage</h3>
+
+        <ol>
+          <li>
+            Utiliser un ensemble batterie compatible
+            comprenant la cellule, les fils et la fiche
+            appropriée. Vérifier la polarité, les protections,
+            les dimensions et la compatibilité avec le
+            circuit de charge. La seule correspondance
+            de tension et de capacité ne suffit pas.
+          </li>
+          <li>
+            Installer la batterie au fond du logement.
+            Faire passer les fils à l’écart des logements
+            de vis et du joint des demi-coques.
+          </li>
+          <li>
+            Reconnecter complètement la fiche à deux
+            broches, puis engager les éléments de
+            positionnement des demi-coques. Vérifier
+            qu’aucun fil n’est pincé avant la fermeture.
+          </li>
+          <li>
+            Remettre les quatre vis en les serrant en
+            diagonale. Le fabricant indique un couple
+            nominal de <strong>0,25 N·m</strong>, sans
+            dépasser <strong>0,35 N·m</strong> dans les
+            logements en ABS. Ne pas remettre en service
+            un boîtier dont les fixations sont endommagées.
+          </li>
+          <li>
+            Vérifier la fermeture : quatre vis en place
+            et affleurantes, écart entre les demi-coques
+            inférieur à <strong>0,5 mm</strong> et absence
+            de pièce libre ou de bruit anormal en
+            manipulant le lecteur.
+          </li>
+          <li>
+            Contrôler la mise sous tension, la lecture
+            d’une carte, le son aux trois niveaux de
+            volume et l’indication de charge.
+            Ne pas remettre le lecteur en service
+            si un contrôle échoue.
+          </li>
+        </ol>
+
+        <p>
+          Garder la batterie retirée hors de portée des
+          enfants, protéger sa connexion contre les
+          courts-circuits et la remettre à une filière
+          de collecte adaptée.
         </p>
 
         <p>
-          Consulter la procédure complète du fabricant
-          pour les critères et précautions d’intervention.
+          Si la configuration du lecteur diffère de celle
+          décrite ici, demander au fabricant la procédure
+          correspondant au produit.
         </p>
       </details>
     </section>
 
-    <section>
+    <section id="collecte">
       <h2>Réemploi, collecte et recyclage</h2>
 
       <p>
@@ -357,16 +434,18 @@
       <h3>Lecteur électrique et batterie intégrée</h3>
 
       <p>
-        Apportez le lecteur complet, avec sa batterie intégrée,
-        dans un point de collecte des équipements électriques
-        et électroniques. Ne tentez pas de retirer vous-même
-        la batterie.
+        Apportez le lecteur complet, avec sa batterie
+        intégrée, dans un point de collecte des équipements
+        électriques et électroniques. Il n’est pas
+        nécessaire de retirer la batterie avant de
+        déposer le lecteur.
       </p>
 
       <p>
         Lorsqu’une batterie a été retirée par un professionnel,
-        elle doit rejoindre une filière de collecte des batteries.
-        Vérifiez les équipements acceptés par le point choisi.
+        elle doit rejoindre une filière de collecte des
+        batteries. Vérifiez les équipements acceptés par
+        le point choisi.
       </p>
 
       <a class="lien-collecte"
@@ -380,8 +459,8 @@
 
       <p>
         Pour les jeux et jouets non électriques relevant
-        de cette filière, consultez les solutions de collecte
-        proposées par Ecomaison et les conditions
+        de cette filière, consultez les solutions de
+        collecte proposées par Ecomaison et les conditions
         d’acceptation du point choisi.
       </p>
 
@@ -395,10 +474,10 @@
       <h3>Emballages ménagers</h3>
 
       <p>
-        Triez les emballages du coffret conformément
-        aux consignes locales. Le Guide du tri de Citeo
-        vous aide à identifier le bon geste selon
-        votre commune et le type d’emballage.
+        Triez les emballages du coffret conformément aux
+        consignes locales. Le Guide du tri de Citeo vous
+        aide à identifier le bon geste selon votre commune
+        et le type d’emballage.
       </p>
 
       <a class="lien-collecte"
@@ -409,14 +488,14 @@
       </a>
 
       <p>
-        Une collecte adaptée permet de récupérer des matières
-        et de limiter les risques liés aux batteries endommagées,
-        notamment les incendies et la dispersion de substances
-        dans l’environnement.
+        Une collecte adaptée permet de récupérer des
+        matières et de limiter les risques liés aux
+        batteries endommagées, notamment les incendies
+        et la dispersion de substances dans l’environnement.
       </p>
     </section>
 
-    <section>
+    <section id="documents">
       <h2>Références des documents techniques</h2>
 
       <p>
@@ -426,7 +505,6 @@
 
       <div class="document">
         <strong>Essais de sécurité de la cellule</strong>
-
         <p>
           IEC 62133-2:2017 + AMD1:2021<br>
           Rapport 250310610633-15<br>
@@ -437,7 +515,6 @@
 
       <div class="document">
         <strong>Essais de transport de la cellule</strong>
-
         <p>
           UN 38.3 — Rapport CMC241111046<br>
           CMC Testing International (Shenzhen) Co., Ltd.<br>
@@ -447,18 +524,22 @@
 
       <div class="document">
         <strong>Dossier de remplacement FC-002</strong>
-
         <p>
-          XDT-REG-2026-001 — Révision 00<br>
+          XDT-REG-2026-001 — Révision 01<br>
           Shenzhen Xinditai Electronic Co., Ltd.<br>
-          11 novembre 2026.
+          12 novembre 2026 — signé par le fabricant.
+        </p>
+        <p>
+          <a href="#procedure-remplacement">
+            Consulter la procédure de retrait et de remplacement
+          </a>
         </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Mini Tounsi — Mise à jour le 11 novembre 2026</p>
+    <p>Mini Tounsi — Mise à jour le 12 novembre 2026</p>
     <a href="/">Retour au site Mini Tounsi</a>
   </footer>
 </body>
